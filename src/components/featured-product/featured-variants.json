@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_featured_product_featured_variants",
+  "info": {
+    "displayName": "Featured-Variants",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Color": {
+      "type": "string"
+    },
+    "Price": {
+      "type": "biginteger",
+      "required": true
+    },
+    "originalPrice": {
+      "type": "biginteger"
+    },
+    "Images": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Stocks": {
+      "type": "biginteger"
+    }
+  }
+}

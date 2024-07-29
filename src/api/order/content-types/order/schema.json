@@ -1,0 +1,80 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Order",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "city": {
+      "type": "string",
+      "required": true
+    },
+    "state": {
+      "type": "string",
+      "required": true
+    },
+    "country": {
+      "type": "string",
+      "required": true
+    },
+    "pinCode": {
+      "type": "biginteger"
+    },
+    "address": {
+      "type": "richtext",
+      "required": true
+    },
+    "apartment": {
+      "type": "richtext",
+      "required": false
+    },
+    "orderStatus": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "processing",
+        "shipped",
+        "delivered",
+        "cancelled"
+      ]
+    },
+    "paymentStatus": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "paid",
+        "failed"
+      ]
+    },
+    "ProductName": {
+      "type": "string"
+    },
+    "TotalPrice": {
+      "type": "decimal"
+    },
+    "Quantity": {
+      "type": "integer"
+    },
+    "OrderedProducts": {
+      "type": "json"
+    },
+    "Contact": {
+      "type": "biginteger"
+    }
+  }
+}

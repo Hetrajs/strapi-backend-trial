@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_kids_product_kids_variants",
+  "info": {
+    "displayName": "Kids-Variants",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Color": {
+      "type": "string"
+    },
+    "Price": {
+      "type": "biginteger"
+    },
+    "originalPrice": {
+      "type": "biginteger"
+    },
+    "Images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Stocks": {
+      "type": "biginteger"
+    }
+  }
+}

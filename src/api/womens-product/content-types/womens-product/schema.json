@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "womens_products",
+  "info": {
+    "singularName": "womens-product",
+    "pluralName": "womens-products",
+    "displayName": "Womens_Product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Name"
+    },
+    "ColorVariants": {
+      "type": "component",
+      "repeatable": true,
+      "component": "womens-product.womens-variants"
+    },
+    "womens_categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::womens-category.womens-category",
+      "inversedBy": "womens_products"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mens_products",
+  "info": {
+    "singularName": "mens-product",
+    "pluralName": "mens-products",
+    "displayName": "Mens_Product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Name"
+    },
+    "ColorVariants": {
+      "type": "component",
+      "repeatable": true,
+      "component": "mens-product.mens-variants"
+    },
+    "mens_categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::mens-category.mens-category",
+      "inversedBy": "mens_products"
+    }
+  }
+}

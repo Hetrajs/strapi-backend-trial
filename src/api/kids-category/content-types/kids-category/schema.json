@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kids_categories",
+  "info": {
+    "singularName": "kids-category",
+    "pluralName": "kids-categories",
+    "displayName": "Kids-category",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "kids_products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::kids-product.kids-product",
+      "mappedBy": "kids_categories"
+    }
+  }
+}

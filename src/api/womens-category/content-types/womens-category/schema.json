@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "womens_categories",
+  "info": {
+    "singularName": "womens-category",
+    "pluralName": "womens-categories",
+    "displayName": "Womens-category"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "womens_products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::womens-product.womens-product",
+      "mappedBy": "womens_categories"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mens_categories",
+  "info": {
+    "singularName": "mens-category",
+    "pluralName": "mens-categories",
+    "displayName": "Mens-category"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "mens_products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::mens-product.mens-product",
+      "mappedBy": "mens_categories"
+    }
+  }
+}

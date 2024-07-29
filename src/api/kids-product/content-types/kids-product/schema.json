@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kids_products",
+  "info": {
+    "singularName": "kids-product",
+    "pluralName": "kids-products",
+    "displayName": "Kids_Product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Name"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "ColorVariants": {
+      "type": "component",
+      "repeatable": true,
+      "component": "kids-product.kids-variants"
+    },
+    "kids_categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::kids-category.kids-category",
+      "inversedBy": "kids_products"
+    }
+  }
+}

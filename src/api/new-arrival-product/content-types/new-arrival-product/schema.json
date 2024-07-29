@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "new_arrival_products",
+  "info": {
+    "singularName": "new-arrival-product",
+    "pluralName": "new-arrival-products",
+    "displayName": "New_Arrival_product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "richtext",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Name",
+      "required": true
+    },
+    "ColorVariants": {
+      "type": "component",
+      "repeatable": true,
+      "component": "product.new-arrival-variant",
+      "required": true,
+      "min": 1
+    }
+  }
+}
